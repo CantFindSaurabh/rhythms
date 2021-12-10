@@ -1,0 +1,62 @@
+
+.Welcome {
+  position:fixed;
+  position: absolute;
+  z-index:200;
+  left:50%;
+  top:53%;
+  transform: translate(-50%, -50%);
+}
+
+.Welcome .heading-1 {
+  color: #009FDC;
+  font-size: 120px;
+  margin: 0;
+}
+.Welcome .heading-2 {
+  color: #E94D4D;
+  font-size: 60px;
+  margin:0;
+}
+.Welcome .heading-3 {
+  color: #FFAD26;
+  font-size: 80px;
+  margin: 0;
+}
+
+
+.Welcome button {
+  padding: 13px 0;
+  margin: 30px 10px;
+  outline: none;
+  border: 1px solid white;
+  background: none;
+  border-radius: 30px;
+}
+.Welcome button a {
+  color: white;
+  padding: 15px 60px;
+  font-size: larger;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+.Welcome .login-btn:hover {
+  background-color: #009FDC;
+  border-color: black;
+}
+
+.Welcome .signup-btn:hover {
+ background-color: #E94D4D;
+ border-color: black;
+}
+
+
+
+@media (max-width: 500px) {
+
+  .Welcome button a {
+    padding: 15px 40px;
+  }
+}

@@ -1,0 +1,27 @@
+.DoubleLineContainer {
+    margin: 0 0 20px 0;
+}
+
+.DoubleLineContainer .content {
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+.DoubleLineContainer > p {
+    color: white;
+    text-align: left;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0 0 25px 10px;
+    padding: 0;
+    letter-spacing: 1px;
+}
+.DoubleLineContainer > div > div {
+    display: flex;
+}
+
+.DoubleLineContainer .content::-webkit-scrollbar {
+    display: none;
+}

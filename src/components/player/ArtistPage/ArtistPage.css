@@ -1,0 +1,14 @@
+.ArtistPage {
+    color: white;
+    display: flex;
+    height: calc(100vh - 150px);
+}
+@media (max-width:550px) {
+    .ArtistPage {
+        flex-direction: column;
+        height: 100%;
+    }
+    .ArtistPage .SongList {
+        margin-top:30px;
+    }
+}

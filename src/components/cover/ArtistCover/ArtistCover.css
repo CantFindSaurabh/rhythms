@@ -1,0 +1,21 @@
+.ArtistCover {
+    color: white;
+    margin: 0px 10px;
+}
+.ArtistCover .cover-image-container  {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+.ArtistCover img {
+    padding: 5px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+}
+.ArtistCover .cover-image-hover {
+    border-radius: 50%;;
+}
+.ArtistCover .cover-image-hover span {
+    font-weight: bolder;
+}

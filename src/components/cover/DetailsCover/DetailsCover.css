@@ -1,0 +1,14 @@
+.DetailsCover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.DetailsCover img {
+    border-radius: 10px;
+    width: 80%;
+}
+.DetailsCover .name {
+    font-size: 20px;
+    font-weight: bolder;
+}

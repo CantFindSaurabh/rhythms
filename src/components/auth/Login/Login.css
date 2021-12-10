@@ -1,0 +1,133 @@
+.Login {
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  backdrop-filter: blur(2px) brightness(30%);
+  border-radius: 30px;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.Login .login-icon {
+  height: 70px;
+}
+
+.Login .details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Login .input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  width: 75%;
+
+  flex-direction: column;
+}
+
+.Login .input-box div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.Login .input-box .header img  {
+  flex: 1;
+  display: block;
+}
+.Login .input-box .header p {
+  flex: 20;
+  text-align: start;
+  padding: 0 0 0 10px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.Login img {
+  height: 20px;
+  filter: invert(1);
+}
+
+.Login input[type="text"],
+.Login input[type="password"] {
+  flex: 2;
+  height: 28px;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  line-height: 30px;
+  font-size: 17px;
+  text-align: left;
+}
+
+.Login .blue {
+  border-bottom: 2px solid #009fdc;
+}
+.Login .peach {
+  border-bottom: 2px solid #e94d4d;
+}
+
+.Login .error-label {
+  color: red;
+  margin: 0;
+  font-size: 14px;
+}
+
+.Login input[type="submit"] {
+  padding: 12px 50px;
+  margin-top: 40px;
+  display: block;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 14px;
+  border-bottom: 1px solid #ffad26;
+  background-color: #ffad26;
+}
+
+.Login input[type="submit"]:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.Login a {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1050px) {
+  .Login {
+    width: 80%;
+  }
+  .Login input[type="submit"] {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .Login {
+    width: 90%;
+  }
+  .Login .input-box {
+    width: 85%;
+  }
+}
+

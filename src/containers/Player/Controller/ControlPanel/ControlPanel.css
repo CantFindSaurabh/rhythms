@@ -1,0 +1,123 @@
+.Controller .ControlPanel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 500;/* Above Backdrop  */
+    backdrop-filter: blur(15px) brightness(10%);
+    color: white;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Controller .ControlPanel > div {
+    flex:1;
+}
+.Controller .ControlPanel .song-details {
+    display:flex;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+    margin: 0 0 0 15px;
+}
+.Controller .ControlPanel .song-details .song-cover {
+    height: 80%;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 20px 0 0;
+}
+.Controller .ControlPanel .song-details .song-name {
+    font-size: 15px;
+}
+.Controller .ControlPanel .song-details .artist-name {
+    font-size: 10px;
+}
+
+.Controller .ControlPanel .extra-controls {
+    justify-content: right;
+    display: flex;
+    margin: 0 15px 0 0;
+}
+.Controller .ControlPanel .extra-controls .volume-seeker {
+    filter: hue-rotate(-15deg)   brightness(130%) ;
+    filter: invert(100%);
+    position: relative;
+    bottom: -9px;
+    cursor: pointer;
+    border-color: black;
+    margin: 0 10px 0 8px;
+    height: 3px;
+}
+
+.Controller .ControlPanel  .main-controls button,
+.Controller .ControlPanel  .extra-controls button {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.Controller .ControlPanel  .main-controls img,
+.Controller .ControlPanel  .extra-controls img {
+    height: 22px;
+    filter: invert(100%) sepia(0%) saturate(2133%) hue-rotate(129deg) brightness(109%) contrast(101%);
+}
+
+.Controller .ControlPanel  img.play-pause-btn {
+    filter: invert(65%) sepia(99%) saturate(542%) hue-rotate(338deg) brightness(103%) contrast(101%);
+}
+
+.Controller .ControlPanel  img.expand-shrink-btn  {
+    filter: invert(45%) sepia(39%) saturate(4320%) hue-rotate(168deg) brightness(99%) contrast(101%);
+}
+
+.Controller .ControlPanel .styled-slider {
+    filter: hue-rotate(495deg) brightness(100%) contrast(150%);
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    border-color: black;
+}
+
+.Controller .ControlPanel .styled-slider::-webkit-slider-runnable-track {
+    height: 5px;
+}
+
+.Controller .ControlPanel .styled-slider::-webkit-slider-thumb {
+    position: relative;
+    bottom: 6px;
+    height: 2px;
+}
+
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg);
+    } 
+}
+
+@media (max-width: 550px) {
+    
+    .Controller .ControlPanel {
+        bottom: 45px; /* height of bottom bar   */
+        height: 50px;
+    }
+    .Controller .ControlPanel .song-details {
+        flex: 5;
+    }
+    .Controller .ControlPanel .song-details .song-name {
+        font-size: 12px;
+    }
+    .Controller .ControlPanel .song-details .artist-name {
+        font-size: 8px;
+    }
+    .Controller .ControlPanel .styled-slider {
+        top: -6px;
+    }
+    .Controller .ControlPanel .styled-slider::-webkit-slider-runnable-track {
+        height: 4px;
+    }
+}

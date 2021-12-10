@@ -1,0 +1,64 @@
+.NavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    backdrop-filter: blur(20px) brightness(20%);
+    z-index: 500;
+    transition: top 0.25s ease-in-out;
+    /* background-color: black; */
+}
+
+.NavBar .logo {
+    height: 120%;
+    display: block;
+}
+
+.NavBar .logo img {
+    height: 100%;
+}
+
+.NavBar .navigation-links {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.NavBar .navigation-links a {
+    display: block;
+    margin: 0 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.NavBar .navigation-links a:hover {
+    color: #FFAD26;
+}
+
+.NavBar .navigation-links .active-navigation-link {
+    color: #E94D4D;
+}
+
+.NavBar input[type="button"] {
+    display: block;
+    background-color: transparent;
+    color: white;
+    font-size: 13px;
+    border: 0;
+    outline: 0;
+}
+
+.NavBar input[type="button"]:hover {
+    cursor: pointer;
+    color: #009FDC;
+}

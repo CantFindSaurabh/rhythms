@@ -1,0 +1,21 @@
+.AlbumCover {
+    color: white;
+    margin: 0px 15px;
+}
+
+.AlbumCover .cover-image-container {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+.AlbumCover .cover-image-container img {
+    border-radius: 8px;
+    position: absolute;
+    z-index: 0;
+}
+.AlbumCover .cover-image-container .cover-image-hover {
+    border-radius: 8px;
+}
+.AlbumCover .cover-image-hover span {
+    font-weight: bolder;
+}

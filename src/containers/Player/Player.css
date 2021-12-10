@@ -1,0 +1,11 @@
+.Player {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+    .Player {
+        padding-bottom: 85px;
+    }
+}

@@ -1,0 +1,160 @@
+.ForgotPass {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    backdrop-filter: blur(2px) brightness(30%);
+    border-radius: 30px;
+    padding: 40px 0;
+    box-sizing: border-box;
+  }
+
+  .ForgotPass .user-icon {
+    height:60px;
+  }
+  
+  .ForgotPass .details {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .ForgotPass .input-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px 0;
+      width: 75%;
+      flex-direction: column;
+  }
+    
+    .ForgotPass .input-box div{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .ForgotPass .input-box .header img  {
+      flex: 1;
+      display: block;
+    }
+    .ForgotPass .input-box .header p {
+      flex: 20;
+      text-align: start;
+      padding: 0 0 0 10px;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+    
+    .ForgotPass img {
+      height: 20px;
+      filter: invert(1);
+    }
+    
+    .ForgotPass input[type="text"],
+    .ForgotPass input[type="password"],
+    .ForgotPass input[type="number"] {
+      flex: 2;
+      height: 28px;
+      background: none;
+      outline: none;
+      border: none;
+      color: white;
+      line-height: 30px;
+      font-size: 17px;
+      text-align: left;
+    }
+    
+    .ForgotPass .blue {
+      border-bottom: 2px solid #009fdc;
+    }
+    .ForgotPass .peach {
+      border-bottom: 2px solid #e94d4d;
+    }
+    
+    .ForgotPass .error-label {
+      color: red;
+      margin: 0;
+      font-size: 15px;
+    }
+  
+  .ForgotPass .password-instructions {
+    font-size: 12px;
+    width: 100%;
+    margin: 5px;
+    color:  whitesmoke
+    
+  }
+  
+    .ForgotPass .otp-send-btn {
+        background-color: transparent;
+        font-size: 15px;
+        padding: 8px 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        color: white;
+        border: 1px solid white;
+    }
+    .ForgotPass .otp-send-btn:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .ForgotPass input[type="submit"] {
+      padding: 12px 50px;
+      margin-top: 25px;
+      display: block;
+      outline: none;
+      border: none;
+      color: white;
+      border-radius: 25px;
+      font-size: 14px;
+      border-bottom: 1px solid #ffad26;
+      background-color: #ffad26;
+    }
+    
+    .ForgotPass input[type="submit"]:hover {
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+    
+    .ForgotPass a {
+      color: white;
+      text-decoration: none;
+      font-size: 10px;
+      margin-top: 15px;
+    }
+  
+    
+    @media (max-width: 1050px) {
+      .ForgotPass {
+        width: 80%;
+      }
+      .ForgotPass input[type="submit"] {
+        margin-top: 40px;
+      }
+    }
+    
+    @media (max-width: 550px) {
+      .ForgotPass {
+        width: 90%;
+      }
+      .ForgotPass .input-box {
+        width: 85%;
+      }
+    }
+  
+  
+    
+    

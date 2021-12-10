@@ -1,0 +1,22 @@
+.Controller .Details {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform ease-in-out 0.3s;
+    z-index:401;
+    background-color: black;
+    padding: 80px 0 70px 0;
+    color:white;
+    display: flex;
+}
+
+@media (max-width: 550px) {
+    .Controller .Details {
+        padding-bottom: 95px; /* height of bottom bar + control panel in mobile view  */
+        flex-direction: column;
+    }
+}
