@@ -1,13 +1,14 @@
 import './NavBar.css';
 
-import { Link, NavLink } from 'react-router-dom'
-
-import logo from '../../../assets/images/logo-transparent.png'
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import { logoutUser } from '../../../store/actions/user';
+import { Link, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
+
+import { logoutUser } from '../../../store/actions/user';
+
+import logo from '../../../assets/images/logo-transparent.png'
 
 const NavBar = props => {
 
@@ -31,9 +32,8 @@ const NavBar = props => {
 
     const logout = () => {
         props.logoutUser(props.token);
-        props.history.push('/')
+        props.history.push('/authenticate')
     }
-
 
     return (
         <div className="NavBar" ref={navBarRef}>

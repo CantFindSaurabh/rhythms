@@ -1,8 +1,11 @@
+import './SingleLineContainer.css';
+
 import { connect } from 'react-redux';
+
 import AlbumCover from '../../cover/AlbumCover/AlbumCover';
 import ArtistCover from '../../cover/ArtistCover/ArtistCover';
 import SongCover from '../../cover/SongCover/SongCover';
-import './SingleLineContainer.css';
+
 import { updatePlayingQueue } from '../../../store/actions/player';
 
 const SingleLineContainer = props => {

@@ -1,11 +1,13 @@
-import './Home.css';
 import { useEffect } from 'react';
+
+import { connect } from 'react-redux';
+
 import Backdrop from '../../../components/ui/Backdrop/Backdrop';
 import Spinner from '../../../components/ui/Spinner/Spinner';
-import * as actions from '../../../store/actions/player';
-import { connect } from 'react-redux';
 import DoubleLineContainer from '../../../components/scrollableContainers/DoubleLineContainer/DoubleLineContainer';
 import SingleLineContainer from '../../../components/scrollableContainers/SingleLineContainer/SingleLineContainer';
+
+import * as actions from '../../../store/actions/player';
 
 const Home = (props) => {
 

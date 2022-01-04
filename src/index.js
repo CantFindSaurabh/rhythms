@@ -1,14 +1,18 @@
+import './index.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import thunk from 'redux-thunk';
+import reportWebVitals from './reportWebVitals';
+
 import { BrowserRouter } from 'react-router-dom';
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
+
+import App from './App';
 import userReducer from './store/reducers/user';
 import playerReducer from './store/reducers/player';
-import './index.css';
-import App from './App';
-import thunk from 'redux-thunk';
-import reportWebVitals from './reportWebVitals';
+
 import * as actionTypes from './store/actions/actionTypes';
 
 const appReducer = combineReducers({

@@ -1,4 +1,5 @@
 import './DetailsCover.css';
+
 import { decode } from 'html-entities';
 
 const DetailsCover = props => {

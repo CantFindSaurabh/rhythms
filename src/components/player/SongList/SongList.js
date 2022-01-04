@@ -1,6 +1,9 @@
 import './SongList.css';
+
 import { connect } from 'react-redux';
+
 import SongListElement from './SongListElement/SongListElement';
+
 import { updatePlayingQueue } from '../../../store/actions/player'
 import { addToFavorites, removeFromFavorites } from '../../../store/actions/user'
 

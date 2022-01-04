@@ -1,8 +1,10 @@
-import { Fragment } from 'react';
 import './ControlPanel.css';
+
+import { Fragment } from 'react';
 import { decode } from 'html-entities';
-import { updatePlayingIndex } from '../../../../store/actions/player'
 import { connect } from 'react-redux';
+
+import { updatePlayingIndex } from '../../../../store/actions/player'
 
 import play from '../../../../assets/images/play-button.png';
 import pause from '../../../../assets/images/pause.png';

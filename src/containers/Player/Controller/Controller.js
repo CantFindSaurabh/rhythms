@@ -1,8 +1,8 @@
-import './Controller.css';
-import ControlPanel from './ControlPanel/ControlPanel';
-import Details from './Details/Details';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
+
+import ControlPanel from './ControlPanel/ControlPanel';
+import Details from './Details/Details';
 import Audio from './ControlPanel/Audio/Audio';
 
 const Controller = props => {
@@ -44,7 +44,7 @@ const Controller = props => {
 
     return (
         <div className="Controller">
-            <Audio volume={songVolume} currentSongData={currentSongData} isPlaying={isPlaying} updateSongTime={updateSongTime} songTime={songTime} />
+            <Audio volume={songVolume} currentSongData={currentSongData} isPlaying={isPlaying} updateSongTime={updateSongTime} songTime={songTime} togglePlaying={togglePlaying} />
 
             <Details currentSongData={currentSongData} isVisible={detailsVisibilityState} toggleVisibility={toggleDetailsVisibility} queue={props.queue} playingIndex={props.playingIndex} />
             <ControlPanel changeAudioVolume={changeAudioVolume} songTime={songTime} updateSongTime={updateSongTime} currentSongData={currentSongData} isDetailsVisible={detailsVisibilityState} toggleDetailsVisibility={toggleDetailsVisibility} isPlaying={isPlaying} togglePlaying={togglePlaying} />

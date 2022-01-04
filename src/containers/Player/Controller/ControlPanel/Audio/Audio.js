@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useRef } from "react";
 import { connect } from "react-redux";
+
 import { updatePlayingIndex } from "../../../../../store/actions/player";
 
 
@@ -50,6 +51,7 @@ const Audio = props => {
             props.updatePlayingIndex(props.playingIndex + 1);
         }
     }, [props.songTime])
+
 
     return (
         <Fragment>

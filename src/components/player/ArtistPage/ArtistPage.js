@@ -1,9 +1,11 @@
+import './ArtistPage.css';
+
 import { Fragment, useEffect, useState } from 'react';
+
 import DetailsCover from '../../cover/DetailsCover/DetailsCover';
 import Backdrop from '../../ui/Backdrop/Backdrop';
 import Spinner from '../../ui/Spinner/Spinner';
 import SongList from '../SongList/SongList';
-import './ArtistPage.css';
 
 const ArtistPage = props => {
 
@@ -15,7 +17,6 @@ const ArtistPage = props => {
         const fetchAlbum = async () => {
             let res = await fetch(process.env.REACT_APP_JIOSAAVN_API + '/search?song=' + encodeURIComponent(props.match.params.id));
             res = await res.json();
-            console.log(props);
 
             setArtistData(res);
             setFetchingState(false);

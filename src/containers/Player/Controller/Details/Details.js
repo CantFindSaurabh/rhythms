@@ -1,7 +1,10 @@
+import './Details.css';
+
 import { Fragment } from 'react';
+
 import DetailsCover from '../../../../components/cover/DetailsCover/DetailsCover';
 import SongList from '../../../../components/player/SongList/SongList';
-import './Details.css';
+
 
 const Details = props => {
 

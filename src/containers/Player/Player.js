@@ -1,6 +1,8 @@
 import './Player.css';
-import Layout from '../Layout/Layout';
+
 import { Redirect, Route, Switch } from 'react-router';
+
+import Layout from '../Layout/Layout';
 import Home from './Home/Home';
 import Controller from './Controller/Controller';
 import AlbumPage from '../../components/player/AlbumPage/AlbumPage';

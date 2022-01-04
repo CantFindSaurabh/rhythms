@@ -1,5 +1,7 @@
 import './SongListElement.css';
+
 import { decode } from 'html-entities';
+
 import heart_black from '../../../../assets/images/heart-black.png'
 import heart_red from '../../../../assets/images/heart-red.png'
 

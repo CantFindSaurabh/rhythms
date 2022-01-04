@@ -1,4 +1,5 @@
 import './AlbumCover.css';
+
 import { decode } from 'html-entities';
 import { withRouter } from 'react-router';
 

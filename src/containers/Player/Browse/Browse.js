@@ -1,7 +1,9 @@
 import './Browse.css';
-import SingleLineContainer from '../../../components/scrollableContainers/SingleLineContainer/SingleLineContainer';
+
 import { useState } from 'react';
 import { Fragment } from 'react';
+
+import SingleLineContainer from '../../../components/scrollableContainers/SingleLineContainer/SingleLineContainer';
 import Backdrop from '../../../components/ui/Backdrop/Backdrop';
 import Spinner from '../../../components/ui/Spinner/Spinner';
 

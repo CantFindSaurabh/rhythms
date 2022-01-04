@@ -1,6 +1,6 @@
 import './ArtistCover.css';
-import { withRouter } from 'react-router';
 
+import { withRouter } from 'react-router';
 
 const ArtistCover = (props) => {
 

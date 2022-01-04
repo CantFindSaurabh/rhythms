@@ -1,9 +1,11 @@
+import './AlbumPage.css';
+
 import { Fragment, useEffect, useState } from 'react';
+
 import DetailsCover from '../../cover/DetailsCover/DetailsCover';
 import Backdrop from '../../ui/Backdrop/Backdrop';
 import Spinner from '../../ui/Spinner/Spinner';
 import SongList from '../SongList/SongList';
-import './AlbumPage.css';
 
 const AlbumPage = props => {
 

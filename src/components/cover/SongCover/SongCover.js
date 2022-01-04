@@ -1,4 +1,5 @@
 import './SongCover.css';
+
 import { decode } from 'html-entities';
 
 const SongCover = props => {

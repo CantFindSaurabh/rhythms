@@ -1,14 +1,16 @@
-import './App.css';
+import React from 'react';
 
-import { Fragment, useEffect } from 'react';
+import { Fragment, Suspense, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
-import Authentication from './containers/Authentication/Authentication';
-import Player from './containers/Player/Player';
+import Backdrop from './components/ui/Backdrop/Backdrop';
+import Spinner from './components/ui/Spinner/Spinner';
 
 import { fetchUserProfile } from './store/actions/user';
 
+const Player = React.lazy(() => import('./containers/Player/Player'));
+const Authentication = React.lazy(() => import('./containers/Authentication/Authentication'));
 
 function App(props) {
 
@@ -25,21 +27,23 @@ function App(props) {
   return (
     <div className="App">
       <Switch>
-        {
-          props.isAuthenticated ?
-            (
-              <Fragment>
-                <Route path='/player' component={Player} />
-                <Redirect to='/player' />
-              </Fragment>
-            ) :
-            (
-              <Fragment>
-                <Route path='/authenticate' component={Authentication} />
-                <Redirect to='/authenticate' />
-              </Fragment>
-            )
-        }
+        <Suspense fallback={<Backdrop> <Spinner /> </Backdrop>}>
+          {
+            props.isAuthenticated ?
+              (
+                <Fragment>
+                  <Route path='/player' render={(props) => <Player {...props} />} />
+                  <Redirect to='/player' />
+                </Fragment>
+              ) :
+              (
+                <Fragment>
+                  <Route path='/authenticate' render={(props) => <Authentication {...props} />} />
+                  <Redirect to='/authenticate' />
+                </Fragment>
+              )
+          }
+        </Suspense>
       </Switch>
     </div>
   );

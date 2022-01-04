@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+
 import BottomBar from '../../components/navigation/BottomBar/BottomBar';
 import NavBar from '../../components/navigation/NavBar/NavBar';
 

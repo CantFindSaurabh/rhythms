@@ -1,6 +1,8 @@
-import { connect } from 'react-redux'
-import SongList from '../../../components/player/SongList/SongList'
 import './Library.css'
+
+import { connect } from 'react-redux'
+
+import SongList from '../../../components/player/SongList/SongList'
 
 const Library = props => {
     return (
