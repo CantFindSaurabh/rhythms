@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import { logoutUser } from '../../../store/actions/user';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 const NavBar = props => {
 
@@ -28,6 +29,12 @@ const NavBar = props => {
         }
     }, [])
 
+    const logout = () => {
+        props.logoutUser(props.token);
+        props.history.push('/')
+    }
+
+
     return (
         <div className="NavBar" ref={navBarRef}>
             <Link to="/player/home" className="logo">
@@ -42,7 +49,7 @@ const NavBar = props => {
                     </div> : null
             }
 
-            <input className="logout-btn" value="LOGOUT" type="button" onClick={props.logoutUser.bind(null, props.token)} />
+            <input className="logout-btn" value="LOGOUT" type="button" onClick={logout} />
 
         </div>
     )
@@ -60,4 +67,4 @@ const mapActionToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapActionToProps)(NavBar);
+export default connect(mapStateToProps, mapActionToProps)(withRouter(NavBar));

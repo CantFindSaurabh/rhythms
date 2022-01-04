@@ -20,7 +20,9 @@ const Audio = props => {
 
             if (!isNaN(audioRef.current.currentTime) && !timeFunction) {
                 timeFunction = setInterval(() => {
-                    props.updateSongTime(Math.floor(audioRef.current.currentTime));
+                    if (audioRef.current != null) {
+                        props.updateSongTime(Math.floor(audioRef.current.currentTime));
+                    }
                 }, 1000);
             }
             else {
@@ -33,6 +35,12 @@ const Audio = props => {
 
             if (audioRef.current.volume !== props.volume) {
                 audioRef.current.volume = props.volume
+            }
+        }
+
+        return () => {
+            if ((!props.isUserAuthenticated) && timeFunction) {
+                clearInterval(timeFunction);
             }
         }
     })
@@ -54,7 +62,8 @@ const Audio = props => {
 
 const mapStateToProps = state => {
     return {
-        playingIndex: state.player.playingIndex
+        playingIndex: state.player.playingIndex,
+        isUserAuthenticated: state.user.isAuthenticated
     }
 }
 const mapActionToProps = dispatch => {

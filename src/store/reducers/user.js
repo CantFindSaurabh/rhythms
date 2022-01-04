@@ -7,6 +7,7 @@ const initialState = {
     name: null,
     email: null,
     favorites: [],
+    playlists: [],
     error: {
         login: {
             email: "",
@@ -68,13 +69,6 @@ const reducer = (state = initialState, action) => {
                     newState.favorites.splice(i, 1);
                 }
             }
-            break;
-        }
-
-        case actionTypes.LOGOUT_USER: {
-            newState.isAuthenticated = false;
-            localStorage.removeItem("jwtToken");
-            console.log("LOGOUt")
             break;
         }
 

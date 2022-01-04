@@ -9,11 +9,23 @@ import './index.css';
 import App from './App';
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
+import * as actionTypes from './store/actions/actionTypes';
 
-const rootReducer = combineReducers({
+const appReducer = combineReducers({
   user: userReducer,
   player: playerReducer
 })
+
+// updating the state to undefined would reset the whole redux state to initial state 
+const rootReducer = (state, action) => {
+
+  if (action.type === actionTypes.LOGOUT_USER) {
+    localStorage.removeItem("jwtToken");
+    state = undefined;
+  }
+
+  return appReducer(state, action);
+}
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
