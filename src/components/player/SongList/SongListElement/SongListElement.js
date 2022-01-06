@@ -4,7 +4,7 @@ import { decode } from 'html-entities';
 
 import heart_black from '../../../../assets/images/heart-black.png'
 import heart_red from '../../../../assets/images/heart-red.png'
-
+import playlist_icon from '../../../../assets/images/playlist.png'
 
 const SongListElement = props => {
 
@@ -26,6 +26,8 @@ const SongListElement = props => {
             <p>{decode(props.song.song_name)}</p>
             <p>{decode(artistName)}</p>
             <p>{props.song.year}</p>
+
+            <img src={playlist_icon} className="plus-icon" alt="plus" onClick={e => { e.stopPropagation(); props.changePlaylistModalSong(props.song) }} />
             <img className={isFavorite ? "favorite-icon-yes" : "favorite-icon-no"} src={isFavorite ? heart_red : heart_black} alt="heart" onClick={(e) => { e.stopPropagation(); isFavorite ? props.removeFromFavorites() : props.addToFavorites(); }} />
         </div>
     )

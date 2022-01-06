@@ -1,0 +1,24 @@
+.PlaylistListElement {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.05s ease-in-out;
+}
+.PlaylistListElement:hover {
+    background-color: rgb(12,12,12);
+    transform: scale(1.1)
+}
+.PlaylistListElement.songPresent {
+    color: #FFAD26;
+}
+
+.PlaylistListElement img{
+    filter: invert(100%);
+    height: 15px;
+}
+
+.PlaylistListElement.songPresent img {
+    filter: invert(65%) sepia(99%) saturate(542%) hue-rotate(338deg) brightness(103%) contrast(101%);
+}

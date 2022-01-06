@@ -18,13 +18,40 @@
     text-align: left;
     padding: 0 5px;
 }
+
 .SongListElement img.favorite-icon-yes,
 .SongListElement img.favorite-icon-no {
+    transition: all 0.2s ease-in-out;
+}
+.SongListElement img.plus-icon {
+    height: 20px;
+    margin-top: 12px;
+}
+
+.SongListElement img.favorite-icon-yes,
+.SongListElement img.favorite-icon-no{
     height: 25px;
     margin-top: 10px;
 }
-.SongListElement img.favorite-icon-no  {
+.SongListElement img.favorite-icon-no,
+.SongListElement img.plus-icon  {
     filter: invert(100%);
+}
+
+.SongListElement img.plus-icon:hover {
+    filter: invert(65%) sepia(99%) saturate(542%) hue-rotate(338deg) brightness(103%) contrast(101%);
+}
+
+.SongListElement img.favorite-icon-yes:hover,
+.SongListElement img.favorite-icon-no:hover {
+    transform: scale(1.2);
+}
+
+.SongListElement img.favorite-icon-yes:active {
+    filter: grayscale(0.4);
+}
+.SongListElement img.favorite-icon-no:active  {
+    filter: invert(34%) sepia(63%) saturate(803%) hue-rotate(318deg) brightness(117%) contrast(88%);
 }
 
 .SongListElement.currently-playing {

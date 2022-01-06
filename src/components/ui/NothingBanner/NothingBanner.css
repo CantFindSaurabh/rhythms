@@ -1,0 +1,33 @@
+.NothingBanner {
+    padding-top: 10%;
+}
+.NothingBanner p {
+    font-size: 50px;
+    font-weight: bolder;
+}
+.NothingBanner  input {
+    border: 1px solid white;
+    color:white;
+    background-color: black;
+    outline: none;
+    padding:10px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.NothingBanner  input:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 550px) {
+
+    .NothingBanner {
+        padding-top:50%;
+    }
+
+    .NothingBanner p {
+        font-size: 30px;;
+    }
+}

@@ -301,3 +301,73 @@ export const logoutUser = token => {
     }
 }
 
+export const createNewPlaylist = (title, token) => {
+
+    return async dispatch => {
+        const params = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+                "authorization": token
+            },
+            body: JSON.stringify({ title })
+        }
+
+        let res = await fetch(process.env.REACT_APP_BACKEND + '/users/playlist', params);
+        res = await res.json();
+
+        dispatch({
+            type: actionTypes.CREATE_PLAYLIST,
+            value: {
+                playlists: res.playlists
+            }
+        })
+    }
+}
+
+export const addSongToPlaylist = (playlistId, song, token) => {
+    return async dispatch => {
+
+        const params = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+                "authorization": token
+            },
+            body: JSON.stringify({ playlistId, song })
+        }
+
+        let res = await fetch(process.env.REACT_APP_BACKEND + '/users/playlist/song', params);
+        res = await res.json();
+
+        dispatch({
+            type: actionTypes.ADD_SONG_TO_PLAYLIST,
+            value: {
+                playlists: res.playlists
+            }
+        })
+    }
+}
+
+export const removeSongFromPlaylist = (playlistId, songId, token) => {
+    return async dispatch => {
+        const params = {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json",
+                "authorization": token
+            },
+            body: JSON.stringify({ playlistId, songId })
+        }
+
+        let res = await fetch(process.env.REACT_APP_BACKEND + '/users/playlist/song', params);
+        res = await res.json();
+
+        dispatch({
+            type: actionTypes.REMOVE_SONG_FROM_PLAYLIST,
+            value: {
+                playlists: res.playlists
+            }
+        })
+    }
+}

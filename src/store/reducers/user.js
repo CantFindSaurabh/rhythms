@@ -72,6 +72,21 @@ const reducer = (state = initialState, action) => {
             break;
         }
 
+        case actionTypes.CREATE_PLAYLIST: {
+            newState.playlists = action.value.playlists;
+            break;
+        }
+
+        case actionTypes.ADD_SONG_TO_PLAYLIST: {
+            newState.playlists = action.value.playlists;
+            break;
+        }
+
+        case actionTypes.REMOVE_SONG_FROM_PLAYLIST: {
+            newState.playlists = action.value.playlists;
+            break;
+        }
+
         default: {
             newState = state;
         }

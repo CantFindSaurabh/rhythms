@@ -14,7 +14,7 @@
     display: flex;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1050px) {
     .Controller .Details {
         padding-bottom: 95px; /* height of bottom bar + control panel in mobile view  */
         flex-direction: column;

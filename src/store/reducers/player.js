@@ -2,9 +2,10 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
     homeData: null,
-    isFetching: false,
+    isFetching: true,
     queue: [],
     playingIndex: -1,
+    playlistModalSong: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -25,10 +26,6 @@ const reducer = (state = initialState, action) => {
             newState.queue.unshift(action.value.song);
             newState.playingIndex = 0;
 
-            if (newState.queue.length > 15) {
-                newState.queue.splice(0, 15);
-            }
-
             break;
         }
         case actionTypes.UPDATE_QUEUE: {
@@ -37,10 +34,6 @@ const reducer = (state = initialState, action) => {
             action.value.songs.forEach(song => {
                 newState.queue.push(song);
             });
-
-            if (newState.queue.length > 15) {
-                newState.queue.splice(0, 15);
-            }
 
             newState.playingIndex = action.value.playingIndex;
             break;
@@ -62,6 +55,11 @@ const reducer = (state = initialState, action) => {
                 newState.playingIndex = 0;
             }
 
+            break;
+        }
+
+        case actionTypes.CHANGE_PLAYLIST_MODAL_SONG: {
+            newState.playlistModalSong = action.value.song;
             break;
         }
 

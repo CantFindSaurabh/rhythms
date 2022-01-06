@@ -1,0 +1,26 @@
+.PlaylistCover {
+    height: 220px;
+    width: 170px;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.PlaylistCover:hover {
+    transform: scale(1.1);
+}
+
+.PlaylistCover-image {
+    height: 38%;
+    width: 50%;
+    border-radius: 2px;
+}
+
+@media (max-width: 500px) {
+    .PlaylistCover {
+        width: 150px;
+    }
+}

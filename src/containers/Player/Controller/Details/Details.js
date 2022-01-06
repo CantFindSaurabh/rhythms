@@ -31,7 +31,7 @@ const Details = props => {
                 !props.currentSongData ? null :
                     <Fragment>
                         {
-                            window.innerWidth < 550 ? null :
+                            window.innerWidth < 1050 ? null :
                                 <DetailsCover image={props.currentSongData.song_image} name={props.currentSongData.song_name} artistName={props.currentSongData.song_artist} releaseYear={props.currentSongData.year} />
                         }
                         <SongList songs={props.queue} currentSongData={props.currentSongData} />

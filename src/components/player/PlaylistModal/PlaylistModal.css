@@ -1,0 +1,77 @@
+.PlaylistModal {
+    backdrop-filter: blur(5px) brightness(20%);
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 50%;
+    top: 47%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 60%;
+    padding: 20px 10px;
+    background-color: black;
+    text-transform: capitalize;
+    list-style: circle;
+}
+.PlaylistModal form {
+    margin-bottom: 30px;
+}
+
+.PlaylistModal input {
+    border: none;
+    color: white;
+    width: 85%;
+    font-size: 15px;
+    border-bottom: 1px solid white;
+    background: none;
+    outline: none;
+}
+.PlaylistModal button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;;
+    cursor: pointer;
+}
+
+.PlaylistModal .close-playlist-modal-btn {
+    color: red;
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    padding:10px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.PlaylistModal::-webkit-scrollbar {
+    width:2px;
+}
+.PlaylistModal::-webkit-scrollbar-track {
+    background: black; 
+}
+
+.PlaylistModal::-webkit-scrollbar-thumb {
+    background: white; 
+}
+  
+@media (max-width: 1050px) {
+    .PlaylistModal {
+        height: 50%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 550px) {
+    .PlaylistModal {
+        height: 50%;
+        width: 80%;
+    }
+}

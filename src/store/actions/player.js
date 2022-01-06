@@ -58,3 +58,11 @@ export const updatePlayingIndex = index => {
     }
 }
 
+export const changePlaylistModalSong = song => {
+    return {
+        type: actionTypes.CHANGE_PLAYLIST_MODAL_SONG,
+        value: {
+            song
+        }
+    }
+}
