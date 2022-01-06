@@ -304,6 +304,14 @@ export const logoutUser = token => {
 export const createNewPlaylist = (title, token) => {
 
     return async dispatch => {
+
+        dispatch({
+            type: actionTypes.UPDATING_PLAYLIST_MODAL,
+            value: {
+                isUpdating: true
+            }
+        })
+
         const params = {
             method: "POST",
             headers: {
@@ -322,11 +330,25 @@ export const createNewPlaylist = (title, token) => {
                 playlists: res.playlists
             }
         })
+
+        dispatch({
+            type: actionTypes.UPDATING_PLAYLIST_MODAL,
+            value: {
+                isUpdating: false
+            }
+        })
     }
 }
 
 export const addSongToPlaylist = (playlistId, song, token) => {
     return async dispatch => {
+
+        dispatch({
+            type: actionTypes.UPDATING_PLAYLIST_MODAL,
+            value: {
+                isUpdating: true
+            }
+        })
 
         const params = {
             method: "POST",
@@ -346,11 +368,26 @@ export const addSongToPlaylist = (playlistId, song, token) => {
                 playlists: res.playlists
             }
         })
+
+        dispatch({
+            type: actionTypes.UPDATING_PLAYLIST_MODAL,
+            value: {
+                isUpdating: false
+            }
+        })
     }
 }
 
 export const removeSongFromPlaylist = (playlistId, songId, token) => {
     return async dispatch => {
+
+        dispatch({
+            type: actionTypes.UPDATING_PLAYLIST_MODAL,
+            value: {
+                isUpdating: true
+            }
+        })
+
         const params = {
             method: "DELETE",
             headers: {
@@ -367,6 +404,12 @@ export const removeSongFromPlaylist = (playlistId, songId, token) => {
             type: actionTypes.REMOVE_SONG_FROM_PLAYLIST,
             value: {
                 playlists: res.playlists
+            }
+        })
+        dispatch({
+            type: actionTypes.UPDATING_PLAYLIST_MODAL,
+            value: {
+                isUpdating: false
             }
         })
     }

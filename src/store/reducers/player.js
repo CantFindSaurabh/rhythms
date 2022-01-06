@@ -5,7 +5,8 @@ const initialState = {
     isFetching: true,
     queue: [],
     playingIndex: -1,
-    playlistModalSong: null
+    playlistModalSong: null,
+    isUpdatingPlaylistModal: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -60,6 +61,11 @@ const reducer = (state = initialState, action) => {
 
         case actionTypes.CHANGE_PLAYLIST_MODAL_SONG: {
             newState.playlistModalSong = action.value.song;
+            break;
+        }
+
+        case actionTypes.UPDATING_PLAYLIST_MODAL: {
+            newState.isUpdatingPlaylistModal = action.value.isUpdating;
             break;
         }
 
