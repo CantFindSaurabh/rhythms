@@ -414,3 +414,31 @@ export const removeSongFromPlaylist = (playlistId, songId, token) => {
         })
     }
 }
+
+export const deletePlaylist = (playlistId, token) => {
+    return async dispatch => {
+
+        dispatch(updateFetchingState(true));
+
+        const params = {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json",
+                "authorization": token
+            },
+            body: JSON.stringify({ playlistId })
+        }
+
+        let res = await fetch(process.env.REACT_APP_BACKEND + '/users/playlist', params);
+        res = await res.json();
+
+        dispatch({
+            type: actionTypes.DELETE_PLAYLIST,
+            value: {
+                playlists: res.playlists
+            }
+        })
+
+        dispatch(updateFetchingState(false));
+    }
+}

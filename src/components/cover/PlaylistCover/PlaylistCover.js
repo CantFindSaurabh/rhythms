@@ -19,8 +19,14 @@ const PlaylistCover = props => {
         return "https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80";
     }
 
+    const deletePlaylist = e => {
+        e.stopPropagation();
+        props.deletePlaylist();
+    }
+
     return (
         <div className="PlaylistCover" onClick={redirectToPlaylistPage}>
+            <button className='dlt-playlist-btn' onClick={deletePlaylist}>x</button>
             <img src={getImage(0)} className="PlaylistCover-image" alt="playlist-cover" />
             <img src={getImage(1)} className="PlaylistCover-image" alt="playlist-cover" />
             <p>{props.playlist.title}</p>

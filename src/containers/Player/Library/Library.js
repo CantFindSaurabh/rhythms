@@ -8,14 +8,25 @@ import SongList from '../../../components/player/SongList/SongList'
 import FavoriteCover from '../../../components/cover/FavoriteCover/FavoriteCover'
 import PlaylistCover from '../../../components/cover/PlaylistCover/PlaylistCover'
 import NothingBanner from '../../../components/ui/NothingBanner/NothingBanner'
+import Backdrop from '../../../components/ui/Backdrop/Backdrop'
+import Spinner from '../../../components/ui/Spinner/Spinner'
+import { deletePlaylist } from '../../../store/actions/user'
 
 const Library = props => {
+
+    if (props.isUpdating) {
+        return (
+            <Backdrop>
+                <Spinner />
+            </Backdrop>
+        )
+    }
 
     const defaultContent = (
         <Fragment>
             <FavoriteCover />
             {
-                props.playlists.map(playlist => <PlaylistCover playlist={playlist} key={"playlistCover" + playlist._id} />)
+                props.playlists.map(playlist => <PlaylistCover playlist={playlist} key={"playlistCover" + playlist._id} deletePlaylist={props.deletePlaylist.bind(null, playlist._id, props.authToken)} />)
             }
         </Fragment>
     )
@@ -50,8 +61,16 @@ const Library = props => {
 const mapStateToProps = state => {
     return {
         favorites: state.user.favorites,
-        playlists: state.user.playlists
+        playlists: state.user.playlists,
+        isUpdating: state.player.isFetching,
+        authToken: state.user.token
     }
 }
 
-export default connect(mapStateToProps)(Library);
+const mapActionsToProps = dispatch => {
+    return {
+        deletePlaylist: (playlistId, authToken) => dispatch(deletePlaylist(playlistId, authToken))
+    }
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(Library);

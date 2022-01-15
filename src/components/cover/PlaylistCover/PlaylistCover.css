@@ -3,12 +3,26 @@
     width: 170px;
     background-color: black;
     border-radius: 10px;
-    transition: all 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     cursor: pointer;
     text-transform: capitalize;
     margin: 10px;
     box-sizing: border-box;
 }
+
+.PlaylistCover .dlt-playlist-btn {
+    position: absolute;
+    background-color: black;
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
 .PlaylistCover:hover {
     transform: scale(1.1);
 }

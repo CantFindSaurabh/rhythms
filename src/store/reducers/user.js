@@ -87,6 +87,11 @@ const reducer = (state = initialState, action) => {
             break;
         }
 
+        case actionTypes.DELETE_PLAYLIST: {
+            newState.playlists = action.value.playlists;
+            break;
+        }
+
         default: {
             newState = state;
         }
