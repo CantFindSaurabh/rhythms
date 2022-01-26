@@ -62,7 +62,7 @@ const mapStateToProps = state => {
     return {
         favorites: state.user.favorites,
         playlists: state.user.playlists,
-        isUpdating: state.player.isFetching,
+        isUpdating: state.user.isFetching,
         authToken: state.user.token
     }
 }
