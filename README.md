@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Rhythms
+Music Streaming Site made with React.js and Redux for frontend and Node.js, Express.js and MongoDB for backend.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+* Search and Stream every song out there
+* Mark songs as Favourites
+* Create Playlists as per your needs
+* OTP based User Authentication
+* Utilizes [JioSaavn API](https://github.com/sumitkolhe/jiosaavn-api) for songs data
+* Responsive Web Design
 
-## Available Scripts
+## Links
 
-In the project directory, you can run:
+###### Testing Credentials:
+Email: ronom80269@mxclip.com  
+Password: Hello@123
 
-### `npm start`
+##### [Hosted Link](http://rhythms-music.herokuapp.com/)
+##### [Backend Repo](https://github.com/saurabh-arora01/rhythms-music-backend)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Snapshots
+#### Desktop View
+![Welcome Page](https://i.ibb.co/80CMPqs/1-1.png)  
+![Login Page](https://i.ibb.co/fNCZ6km/2-1.png)  
+![Player](https://i.ibb.co/yQnMQzT/Screenshot-234.png)  
+![Details](https://i.ibb.co/v1trZcV/6-1.png)  
+![Playlist](https://i.ibb.co/svvfPWX/7-1.png)  
+![Browse](https://i.ibb.co/PtbMZtv/8-1.png)  
+![Library](https://i.ibb.co/R7JxyRC/9-1.png)  
