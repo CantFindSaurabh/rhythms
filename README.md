@@ -15,7 +15,7 @@ Music Streaming Site made with React.js and Redux for frontend and Node.js, Expr
 Email: ronom80269@mxclip.com  
 Password: Hello@123
 
-##### [Hosted Link](http://rhythms-music.herokuapp.com/)
+##### [Hosted Link](https://rhythms.vercel.app/)
 ##### [Backend Repo](https://github.com/saurabh-arora01/rhythms-music-backend)
 
 ## Snapshots
